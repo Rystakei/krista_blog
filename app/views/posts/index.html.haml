@@ -9,8 +9,8 @@
 
 - @posts = Post.all 
 
-- @posts.each do |t|
-	%h2= t.title
-	%p= t.body
+- @posts.each do |post|
+	%h2= link_to "#{post.title}", post_path(post)  
+	%p= post.body
 
 
