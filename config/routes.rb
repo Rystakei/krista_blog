@@ -57,5 +57,8 @@ KristaBlog::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 get 'posts' => 'posts#index'
 get '/post/:id' => 'posts#show', as: 'post'
+get '/posts/new' => 'posts#new', as: 'new_post'
+post '/posts/create' => 'posts#create' as 'created_post'
+
 end
 
