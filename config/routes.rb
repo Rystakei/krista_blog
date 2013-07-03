@@ -58,7 +58,10 @@ KristaBlog::Application.routes.draw do
 get 'posts' => 'posts#index'
 get '/post/:id' => 'posts#show', as: 'post'
 get '/posts/new' => 'posts#new', as: 'new_post'
-post '/posts/create' => 'posts#create' as 'created_post'
+post '/posts' => 'posts#create', as: 'create_post'
+get '/posts/:id/edit' => 'posts#edit', as: 'edit_post'
+put '/post/:id' => 'posts#update', as: 'update_post'
+# delete 'posts/delete'
 
 end
 
